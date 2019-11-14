@@ -1,0 +1,24 @@
+<div class= 'banner' style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://cdn.danspapers.com/wp-content/uploads/2018/08/cocktails.jpg);">>
+  <div d-flex flex-column align-items-left>
+    <h1>Drinking alcohol can also make you an Artist</h1>
+    <h2>Best cocktails made by our community and you</h2>
+    <%= link_to "add a cocktail", new_cocktail_path, class: "btn btn-gradient" %><
+  </div>
+
+  <div class="container">
+    <h1>All our cocktails</h1>
+    <div class="row" flex-rowwrap>
+      <ul>
+        <% @cocktails.each do |cocktail| %>
+        <div class="col-4">
+          <div class="cards">
+            <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+              <li><%= link_to cocktail.name, cocktail_path(cocktail) %></li>
+            </div>
+          </div>
+        </div>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>
