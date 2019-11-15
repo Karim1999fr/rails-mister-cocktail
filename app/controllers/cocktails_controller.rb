@@ -1,13 +1,19 @@
 class CocktailsController < ApplicationController
-  before_action :set_cocktail, only: [:show]
+  before_action :set_cocktail, only: [:show, :search]
 
   def index
+    if params[:query].present?
+      sql_query = "title ILIKE :query OR syllabus ILIKE :query"
+      @cocktails = Cocktail.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @cocktails = Cocktail.all
+    end
     @cocktails = Cocktail.all
   end
 
-    def show
-      @dose = Dose.new
-    end
+  def show
+    @dose = Dose.new
+  end
 
   def new
     @cocktail = Cocktail.new

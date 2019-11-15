@@ -1,7 +1,10 @@
-.banner {
+.home-banner {
+  background-image: url('https://cdn.danspapers.com/wp-content/uploads/2018/08/cocktails.jpg');
   background-size: cover;
-  background-position: center;
-  padding: 250px 0;
+  height: 100vh;
+  color: #eee;
+  text-align: center;
+  padding-top: 40vh;
 }
 
 .btn-gradient {
@@ -89,12 +92,15 @@
 .footer .fa-heart {
   color: #D23333;
 }
-
-.home-banner {
-  background-image: url('TODO: A picture URL from unsplash.com!');
-  background-size: cover;
-  height: 100vh;
-  color: #eee;
-  text-align: center;
-  padding-top: 40vh;
+.color_red {
+  color: red;
 }
+
+// .home-banner {
+//   background-image: url('https://cdn.danspapers.com/wp-content/uploads/2018/08/cocktails.jpg');
+//   background-size: cover;
+//   height: 100vh;
+//   color: #000;
+//   text-align: center;
+//   padding-top: 40vh;
+// }

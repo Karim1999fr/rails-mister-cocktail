@@ -1,4 +1,4 @@
-<div class= 'banner' style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://cdn.danspapers.com/wp-content/uploads/2018/08/cocktails.jpg);">>
+<div class= 'home-banner'>
  <div class="container">
   <div d-flex flex-column align-items-left>
     <h1 class= "color-white">Drink <span id="banner-typed-text"></span></h1>
@@ -8,6 +8,7 @@
   </div>
 </div>
   <div class="container">
+    <%= render 'shared/search' %>
   <h1 class="mt-5">All Our Amazing Cocktails</h1>
   <div class="row mt-4">
     <% @cocktails.each do |cocktail| %>
@@ -23,14 +24,14 @@
 
   <div class="footer">
   <div class="footer-links">
-    <a href="#"><i class="fab fa-github"></i></a>
-    <a href="#"><i class="fab fa-instagram"></i></a>
-    <a href="#"><i class="fab fa-facebook"></i></a>
-    <a href="#"><i class="fab fa-twitter"></i></a>
-    <a href="#"><i class="fab fa-linkedin"></i></a>
+    <a href="https://github.com/" target="blank"><i class="fab fa-github"></i></a>
+    <a href="https://www.instagram.com/explore/tags/biere/" target="blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.facebook.com/marketplace/paris/search/?callsite=commerce_mktplace_www_hoisted_pdp&hoisted_item=2216003011845035&query=bar%20a%20biere" target="blank"><i class="fab fa-facebook"></i></a>
+    <a href="https://twitter.com/saveurbiere?lang=fr" target="blank"><i class="fab fa-twitter"></i></a>
+    <a href="https://fr.linkedin.com/company/interdrinks-sas---saveur-biere.com" target="blank"><i class="fab fa-linkedin"></i></a>
   </div>
   <div class="footer-copyright">
-    This footer is made with <i class="fas fa-heart"></i> at Le Wagon
+    This footer is made with <i class="fas fa-heart"></i>
   </div>
 </div>
 </div>
