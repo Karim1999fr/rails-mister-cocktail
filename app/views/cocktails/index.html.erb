@@ -1,24 +1,36 @@
 <div class= 'banner' style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://cdn.danspapers.com/wp-content/uploads/2018/08/cocktails.jpg);">>
+ <div class="container">
   <div d-flex flex-column align-items-left>
-    <h1>Drinking alcohol can also make you an Artist</h1>
-    <h2>Best cocktails made by our community and you</h2>
-    <%= link_to "add a cocktail", new_cocktail_path, class: "btn btn-gradient" %><
+    <h1 class= "color-white">Drink <span id="banner-typed-text"></span></h1>
+    <h2 class="color-white mt-3 mb-3">Best cocktails made by our community and you</h2>
+    <%= link_to "add a cocktail", new_cocktail_path, class: "btn btn-gradient" %>
   </div>
-
+  </div>
+</div>
   <div class="container">
-    <h1>All our cocktails</h1>
-    <div class="row" flex-rowwrap>
-      <ul>
-        <% @cocktails.each do |cocktail| %>
-        <div class="col-4">
-          <div class="cards">
-            <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
-              <li><%= link_to cocktail.name, cocktail_path(cocktail) %></li>
-            </div>
+  <h1 class="mt-5">All Our Amazing Cocktails</h1>
+  <div class="row mt-4">
+    <% @cocktails.each do |cocktail| %>
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="cards mt-4 d-flex flex-column align-items-center justify-content-center" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://source.unsplash.com/500x400/?cocktail');">
+          <div class="card-description">
+            <%= link_to cocktail.name, cocktail_path(cocktail), class: 'card-link' %>
           </div>
         </div>
-        <% end %>
-      </ul>
-    </div>
+      </div>
+    <% end %>
   </div>
+
+  <div class="footer">
+  <div class="footer-links">
+    <a href="#"><i class="fab fa-github"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+  </div>
+  <div class="footer-copyright">
+    This footer is made with <i class="fas fa-heart"></i> at Le Wagon
+  </div>
+</div>
 </div>
